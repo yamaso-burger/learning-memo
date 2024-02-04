@@ -13,3 +13,9 @@ Specific git-branch actions:
     etc...
 ```
 
+## デフォルト main ブランチにする
+以下のコマンドを実行することで変更できる
+`git config --global init.defaultBranch main`
+
+- [参考](https://qiita.com/fk_chang/items/a4839a595fef9a2c3724)
+
