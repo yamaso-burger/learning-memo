@@ -82,6 +82,19 @@ public void testSuccessfulSubmission() throws Exception {
 - `MockMvcRequestBuilders.post(path)
         .flashAttr(name, object)`でフラッシュアトリビュート（リダイレクト時にメソッドで渡すもの）として値をセットできる
 
+### MockMvc メソッド覚書
+- andExpect メソッドの中身
+    - `status().isOK()`: HTTPステータスが200かどうか
+    - `content().contentType(MediaType.APPLICATION_JSON)`: 返されたデータが JSON
+ 形式であるかどうか
+    ― `jsonPath("$.name").value("Jon Snow")`: 返された JSON の値が期待値通りかどうか
+
+#### jsonPath
+返された JSON の値を検証できる
+例：JSON の中身に期待したデータが存在するかどうか
+```java
+
+```
 
 ## 利用するアノテーション
 - `@SpringBootTest`
